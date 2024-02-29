@@ -33,9 +33,6 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        console.log(clientID);
-        console.log(clientSecret);
-        console.log(profile);
         if (!profile || !profile.emails || !profile.emails[0]) {
           // Check if necessary profile information is undefined
           return done(null, false, {
